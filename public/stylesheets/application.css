@@ -12,8 +12,18 @@ pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
 /***** Layout *****/
 #wrapper {background: white;overflow: hidden;}
 
-#top-menu {background: #3E5B76; color: #fff; height:1.8em; font-size: 0.8em; padding: 2px 2px 0px 6px;}
-#top-menu ul {margin: 0;  padding: 0;}
+#top-menu {
+  background: #3E5B76;
+  color: #fff;
+  height:5em;
+  font-size: 0.8em;
+  padding: 0px 6px;
+  display:flex;
+  flex-direction:row-reverse;
+  align-items:center;
+  flex: 1 0 auto;
+}
+#top-menu ul {margin: 0 15px;  padding: 0;}
 #top-menu li {
   float:left;
   list-style-type:none;
@@ -22,19 +32,16 @@ pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
   white-space:nowrap;
 }
 #top-menu a {color: #fff; margin-right: 8px; font-weight: bold;}
-#top-menu #loggedas { float: right; margin-right: 0.5em; color: #fff; }
+#top-menu #loggedas { margin-right: 0.5em; color: #fff; }
+#top-menu h1 { padding: 0; margin: 0; overflow: hidden; white-space: nowrap; flex-grow:2;}
+#top-menu h1 .breadcrumbs { margin-right: 10px; display:inline-block; font-size: .8em; font-weight: normal; }
 
-#account {float:right;}
-
-#header {min-height:5.3em;margin:0;background-color:#628DB6;color:#f8f8f8; padding: 4px 8px 20px 6px; position:relative;}
+#header {margin:0; background-color:#628DB6;color:#f8f8f8; padding: 0 8px; position:relative;}
 #header a {color:#f8f8f8;}
-#header h1 { overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
-#header h1 .breadcrumbs { display:block; font-size: .5em; font-weight: normal; }
 
-#quick-search {float:right;}
 #quick-search #q {width:130px; height:24px; box-sizing:border-box; vertical-align:middle; border:1px solid #ccc; border-radius:3px;}
 
-#main-menu {position: absolute;  bottom: 0px;  left:6px; margin-right: -500px; width: 100%;}
+#main-menu {position: relative;  bottom: 0px;  left:6px; width: 100%;}
 #main-menu ul {margin: 0;  padding: 0; width: 100%; white-space: nowrap;}
 #main-menu li {
   float:none;
